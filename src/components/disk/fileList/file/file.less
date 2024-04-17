@@ -1,0 +1,171 @@
+@import '../../../../utils/colors.less';
+
+.file {
+    padding: 8px;
+    border-bottom: 1px solid @lightgrey;
+    display: grid;
+    grid-template-columns: 0.5fr 5fr repeat(2, 1fr) 0.5fr;
+    color: @subtext;
+    font-weight: 400;
+    align-items: center;
+    transition: ease-in 50ms all;
+
+    &:hover {
+        background-color: #f9fafc;
+    }
+
+    &__img {
+        height: 40px;
+        justify-self: center;
+    }
+
+    &__name {
+        grid-column-start: 2;
+        width: 98%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__date {
+        grid-column-start: 3;
+        justify-self: center;
+    }
+
+    &__size {
+        grid-column-start: 4;
+        justify-self: center;
+    }
+
+    &__actions {
+        grid-column-start: 5;
+        justify-self: center;
+        position: relative;
+    }
+
+    &__menu {
+        height: 20px;
+        width: 23px;
+    }
+
+    &__options {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        box-shadow: 2px 2px 6px @grey;
+        border-radius: 8px;
+
+        .popup {
+            padding: 4px;
+
+            &__header {
+                display: none;
+            }
+
+            button {
+                width: 100%;
+                border-radius: 4px;
+                margin: 0;
+            }
+        }
+    }
+
+    &__actions:hover &__options {
+        display: block;
+    }
+}
+
+.file-plate {
+    width: 150px;
+    height: 150px;
+    margin: 4px;
+    padding: 16px 12px;
+    border: 1px solid @borders;
+    border-radius: 8px;
+    color: @subtext;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: ease-in 50ms all;
+    position: relative;
+
+    &:hover {
+        background-color: #f9fafc;
+    }
+
+    &__img {
+        height: 60px;
+        margin: 8px 0;
+    }
+
+    &__name {
+        margin-bottom: 4px;
+        max-width: 98%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__size {
+        font-size: 12px;
+        color: @subtext-80;
+        letter-spacing: -0.4px;
+    }
+
+    &__date {
+        display: none;
+    }
+
+    &__actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__menu {
+        height: 20px;
+        width: 23px;
+    }
+
+    &__options {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        box-shadow: 2px 2px 6px @grey;
+        border-radius: 8px;
+
+        .popup {
+            padding: 4px;
+
+            &__header {
+                display: none;
+            }
+
+            button {
+                width: 100%;
+                border-radius: 4px;
+                margin: 0;
+            }
+        }
+    }
+
+    &__actions:hover &__options {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    .file {
+
+        &__date {
+            display: none
+        }
+    
+        &__size {
+            display: none
+        }
+    }
+}

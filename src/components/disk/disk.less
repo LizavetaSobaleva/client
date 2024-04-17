@@ -1,0 +1,123 @@
+@import '../../utils/colors.less';
+
+.disk {
+    padding: 12px 24px 40px 24px;
+    height: 100%;
+    overflow-y: auto;
+
+    &__btns{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .secondaryButton {
+            padding: 4px;
+
+            &:hover {
+                background-color: @background-color;
+            }
+
+            img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+
+    button {
+        margin: 4px;
+    }
+    &__upload {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    &__upload-input {
+        display: none;
+        width: 100%;
+    }
+
+    &__upload-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 16vh;
+        min-height: 120px;
+        padding: 20px;
+        border: 2px dashed @primary;
+        border-radius: 8px;
+        box-sizing: border-box;
+        background-color: @primary-10;
+        font-weight: 400;
+        font-size: 14px;
+        cursor: pointer;
+        
+    }
+
+    &__upload-img {
+        height: 48px;
+        padding: 4px;
+        margin: 8px;
+        background-color: @primary-10;
+        border-radius: 50%;
+    }
+
+    &__drop-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 16vh;
+        min-height: 120px;
+        margin-top: 20px;
+        padding: 20px;
+        border: 2px dashed @primary;
+        border-radius: 8px;
+        box-sizing: border-box;
+        background-color: @primary-20;
+        font-weight: 400;
+        font-size: 14px;
+        
+    }
+}
+
+.createdir {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .popup {
+        height: 180px;
+        width: 340px;
+        padding: 16px 20px;
+
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .disk {
+
+        &__upload-message {
+            display: none;
+        }
+    }
+
+}

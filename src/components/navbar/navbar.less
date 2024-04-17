@@ -1,0 +1,79 @@
+@import '../../utils/colors.less';
+
+.navbar {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid @borders;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    &__logo {
+        height: 50px;
+        margin-right: 8px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        font-size: 24px;
+        font-weight: 700;
+        color: @primary;
+    }
+
+    &__btns {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 12px;
+
+        a {
+            text-decoration: none;
+            color: @primary;
+        }
+    }
+
+    &__registration {
+        margin-left: 24px;
+    }
+
+    Input {
+        width: 40vw;
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        font-weight: 400;
+
+        img {
+            height: 40px;
+            width: 40px;
+            margin-left: 8px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar {
+        &__message {
+            display: none;
+        }
+    }
+}

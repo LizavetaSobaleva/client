@@ -1,0 +1,88 @@
+@import '../../../utils/colors.less';
+
+
+.navigation {
+
+
+
+    &__title {
+        padding: 12px 0 12px 8px ;
+        cursor: pointer;
+        border-radius: 4px;
+        color: @text;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: @lightgrey;
+        }
+    }
+    
+    &__icon {
+        height: 28px;
+        margin-right: 8px;
+    }
+
+    &__name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    &__dropdown {
+        margin-right: 12px;
+        margin-left: auto;
+    }
+
+    &__content {
+        display: none;
+        margin-left: 24px;
+    }
+}
+
+.diritem {
+    color: @text;
+    margin-left: 12px;
+    transition: all 500ms ease-in;
+    
+
+    &__content {
+        padding: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: @lightgrey;
+        }
+    }
+
+    &__title {
+        width: 80%;
+    }
+
+    &__subitem {
+        display: none;
+        border-left: 1px solid @borders;
+    }
+}
+
+.visible {
+    display: flex;
+    flex-direction: column;
+    animation-name: slideIn;
+    animation-duration: 500ms;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

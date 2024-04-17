@@ -1,0 +1,30 @@
+@import '../../../utils/colors.less';
+
+.progressBar {
+    width: 100%;
+    
+
+    &__line {
+        height: 4px;
+        background-color: @grey;
+        border-radius: 4px;
+    }
+
+
+    &__upload {
+        height: 4px;
+        background-color: @primary;
+        border-radius: 8px;
+        width: 0;
+        transition: width 0.3s ease;
+    }
+
+    &__percent {
+        margin-top: 4px;
+        color: @subtext;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: end;
+        transition: margin-right 0.3s ease;
+    }
+}

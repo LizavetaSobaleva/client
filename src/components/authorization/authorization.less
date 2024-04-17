@@ -1,0 +1,70 @@
+@import '../../utils/colors.less';
+
+.authorization {
+    height: calc(100vh - 60px);
+    background-color: @primary;
+
+    &__container {
+        width: 50%;
+        height: 100%;
+        min-width: 360px;
+        display: flex;
+        margin-left: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: @lightgrey;
+    }
+
+    &__label {
+        margin: 32px 0;
+    }
+
+    &__form {
+        width: 50%;
+        min-width: 300px;
+        height: fit-content;
+        padding: 20px 40px 40px;
+        border-radius: 8px;
+        border: 1px solid @borders;
+        background-color: @background-color;
+    }
+
+    &__item {
+        margin: 12px 0;
+    }
+
+    &__login {
+        margin-top: 16px;
+        font-weight: 400;
+
+        a {
+            color: @primary;
+        }
+    }
+
+    button {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .cloud {
+        height: 200px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+label { 
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 960px){
+    .authorization__container {
+        width: 100%;
+    }
+
+}

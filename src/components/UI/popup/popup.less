@@ -1,0 +1,41 @@
+@import '../../../utils/colors.less';
+
+.popup {
+    height: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid @borders;
+    background-color: @background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__header {
+        width: 100%;
+        margin-bottom: 12px;
+        font-size: 20px;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        .secondaryButton {
+            padding: 4px;
+            margin: 0;
+            height: 32px;
+            width: 32px;
+        }
+
+        
+    }
+
+    &__close {
+        width: 24px;
+    }
+
+    Button {
+        margin-top: 12px;
+    }
+}

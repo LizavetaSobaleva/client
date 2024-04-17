@@ -1,0 +1,30 @@
+@import '../../../utils/colors.less';
+
+.dropdown {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    
+
+    &__icon {
+        height: 24px;
+    }
+
+    .flipped {
+        animation-name: flip;
+        animation-duration: 400ms;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(-1);
+    }
+  }

@@ -1,0 +1,64 @@
+@import '../../utils/colors.less';
+
+.profile {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid @borders;
+    border-radius: 8px;
+    display: flex;
+
+    &__header {
+        display: flex;
+    }
+
+    &__avatar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            display: none;
+        }
+    }
+
+    &__image {
+        height: 140px;
+        width: 140px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50%;
+        margin-bottom: 8px;
+    }
+
+    &__content {
+        padding: 12px 20px;
+        width: 80%;
+    }
+
+    &__name {
+        font-size: 20px;
+    }
+
+    &__email {
+        color: @subtext;
+        font-weight: 300;
+    }
+
+    &__diskSpace {
+        padding-top: 20px;
+        width: 300px;
+    }
+
+    &__data {
+        font-size: 12px;
+        padding: 4px 0;
+
+        .progressBar {
+            padding: 4px 0;
+
+            &__line, &__upload {
+                height: 8px;
+            }
+        }
+    }
+}

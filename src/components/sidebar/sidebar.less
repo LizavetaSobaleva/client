@@ -1,0 +1,127 @@
+@import '../../utils/colors.less';
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 8px;
+    background-color: @background-color;
+    border-right: 1px solid @borders;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: width 0.3s ease-in-out;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        padding: 20px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: @primary;
+    }
+
+    &__logo {
+        height: 60px;
+        margin-right: 8px;
+    }
+
+    &__title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    &__navigation {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__logout {
+        margin-top: auto;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logout-icon {
+        height: 28px;
+        display: none;
+    }
+
+    &__logout-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    &__compress {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: @borders;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 60px;
+        left: calc(240px - 16px);
+        transform: rotate(90deg);
+        transition: left 0.3s ease-in-out;
+    }
+}
+
+.compressed {
+    width: 80px;
+
+    .sidebar {
+
+        &__title, &__logout-text {
+            display: none;
+        }
+        &__logout {
+            button {
+                padding: 8px 12px;
+            }
+        }
+
+        &__logout-icon {
+            display: inline;
+        }
+
+        &__compress {
+            left: calc(80px - 15px);
+        }
+    }
+
+    .navigation {
+        &__name, &__dropdown, &__content {
+            display: none;
+        }
+
+        &__title {
+            justify-content: center;
+        }
+    }
+}
