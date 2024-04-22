@@ -4,7 +4,11 @@
     margin: 24px 0;
     border: 1px solid @lightgrey;
     border-radius: 8px;
+    position: relative;
 
+    .loader {
+        top: 40;
+    }
 
     &__header {
         display: grid;
@@ -42,13 +46,14 @@
     }
 
     &__back {
-        padding: 8px 20px;
+        padding: 8px;
         border-bottom: 1px solid @lightgrey;
         display: grid;
         grid-template-columns: 0.5fr 4fr repeat(4, 1fr);
         color: @subtext;
         font-weight: 400;
         align-items: center;
+        justify-content: center;
         transition: ease-in 50ms all;
 
         &:hover {
@@ -58,8 +63,10 @@
     }
 
     &__img {
-        height: 30px;
+        height: 28px;
         opacity: 0.5;
+        padding: 0 6px;
+        justify-self: center;
     }
 
     &__empty {
@@ -74,6 +81,12 @@
     margin: 24px 0;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+
+    .loader {
+        top: -6%;
+        border-radius: 4px;
+    }
 
     &__back {
         width: 150px;
@@ -98,6 +111,13 @@
             background-color: #f9fafc;
             cursor: pointer;
         }
+    }
+
+    &__empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: @subtext;
     }
 }
 
@@ -127,6 +147,15 @@
     
         &__size {
             display: none
+        }
+    }
+
+    .fileplate__back {
+        width: 100%;
+        height: 36px;
+
+        img {
+            height: 28px;
         }
     }
 

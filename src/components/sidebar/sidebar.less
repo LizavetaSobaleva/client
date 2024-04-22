@@ -75,7 +75,7 @@
         text-overflow: clip;
     }
 
-    &__compress {
+    &__compressBtn {
         width: 32px;
         height: 32px;
         display: flex;
@@ -110,7 +110,7 @@
             display: inline;
         }
 
-        &__compress {
+        &__compressBtn {
             left: calc(80px - 15px);
         }
     }
@@ -123,5 +123,11 @@
         &__title {
             justify-content: center;
         }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .sidebar  {
+        display: none;
     }
 }

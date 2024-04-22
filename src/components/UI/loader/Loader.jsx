@@ -4,11 +4,7 @@ import "./loader.less"
 const Loader = () => {
   return (
     <div className="loader">
-        <div className="loader__content">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <div className="loader__line"></div>
     </div>
   )
 }

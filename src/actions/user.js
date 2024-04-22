@@ -13,7 +13,6 @@ export const registration = async (name, email, password, dispatch) => {
             email,
             password
         })
-        alert(response.data.message)
         dispatch(login(email, password))
    } catch (e) {
         alert(e.response.data.message)

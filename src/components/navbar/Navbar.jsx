@@ -41,7 +41,7 @@ const Navbar = () => {
         <>
           <div className="navbar__header">
             <img src={Logo} alt="" className="navbar__logo"/>
-            MERN cloud
+            <span>MERN cloud</span>
           </div>
           <div className="navbar__btns">
             <div className="navbar__login"><NavLink to="/login">Log in</NavLink></div>

@@ -38,6 +38,8 @@ const FileList = () => {
             <div className="filelist__size">File size</div>
             <div className="filelist__actions"></div>
           </div>
+
+          {loader && <Loader/> }
           
             {currentDir && 
               <div className="filelist__back" onClick={() => backClickHandler()}>
@@ -45,8 +47,6 @@ const FileList = () => {
                 Back
               </div>}
   
-              {loader && <Loader/> }
-            
               <TransitionGroup>
                 {sortedFiles.map((file) => 
                   <CSSTransition

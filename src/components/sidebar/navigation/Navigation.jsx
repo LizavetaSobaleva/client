@@ -12,7 +12,7 @@ import DropdownButton from '../../UI/dropdownButton/DropdownButton'
 
 const Navigation = () => {
     const dispatch = useDispatch()
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     const dirStructure = useSelector((state) => state.files.dirStructure)
     const hasChildren = dirStructure && dirStructure.length > 0
 
@@ -29,7 +29,6 @@ const Navigation = () => {
 
   return (
     <div className='navigation'>
-      
       <div className="navigation__item">
       <NavLink to="/"  onClick={() => openHandler()}>
         <div className="navigation__title">
@@ -53,9 +52,7 @@ const Navigation = () => {
           )}
         </div>
       </div>
-      
-
-      <div className="navigation__item">
+      {/* <div className="navigation__item">
       <div className="navigation__title">
           <img src={Star} alt="" className="navigation__icon"/>
           <div className="navigation__name">Menu Item 2</div>
@@ -67,10 +64,7 @@ const Navigation = () => {
           <img src={Settings} alt="" className="navigation__icon"/>
           <div className="navigation__name">Menu Item 3</div>
         </div>
-      </div>
-        
-        
-        
+      </div> */}
     </div>
   )
 }

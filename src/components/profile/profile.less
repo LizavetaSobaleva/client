@@ -1,7 +1,7 @@
 @import '../../utils/colors.less';
 
 .profile {
-    margin: 20px;
+    margin: 12px 20px 20px 20px;
     padding: 20px;
     border: 1px solid @borders;
     border-radius: 8px;
@@ -32,7 +32,6 @@
 
     &__content {
         padding: 12px 20px;
-        width: 80%;
     }
 
     &__name {
@@ -59,6 +58,52 @@
             &__line, &__upload {
                 height: 8px;
             }
+        }
+    }
+
+    &__back {
+        display: none;
+    }
+
+    &__logout {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .profile {
+        flex-direction: column;
+
+        &__diskSpace {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .profile{
+        &__back {
+            height: 32px;
+            margin: 20px 20px 12px 20px;
+            padding: 20px;
+            border: 1px solid @borders;
+            border-radius: 8px;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: ease-in 50ms all;
+    
+            img {
+                height: 28px;
+                opacity: 0.5;
+            }
+        }
+        
+        &__logout {
+            display: flex;
+            justify-content: center;
         }
     }
 }

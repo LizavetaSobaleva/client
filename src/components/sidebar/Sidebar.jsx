@@ -22,10 +22,12 @@ const Sidebar = () => {
       const screenWidth = window.innerWidth
       const sidebar = document.querySelector('.sidebar')
     
-      if (screenWidth <= 768) {
-        sidebar.classList.add('compressed')
-      } else {
-        sidebar.classList.remove('compressed')
+      if (sidebar) {
+        if (screenWidth <= 768) {
+          sidebar.classList.add('compressed');
+        } else {
+          sidebar.classList.remove('compressed');
+        }
       }
     })
     
@@ -43,15 +45,14 @@ const Sidebar = () => {
           <div className="sidebar__navigation">
             <Navigation/>
           </div>
-          <div className="sidebar__logout" onClick={() => dispatch(logout())}>
-            
-            <SecondaryButton>
+          <div className="sidebar__logout">
+            <SecondaryButton onClick={() => dispatch(logout())}>
               <img src={Logout} alt="" className="sidebar__logout-icon"/>
               <div className="sidebar__logout-text">Log out</div>
             </SecondaryButton>
           </div>
         </div>
-        <div className='sidebar__compress' onClick={toggleDropdown}>
+        <div className='sidebar__compressBtn' onClick={toggleDropdown}>
           <DropdownButton/>
         </div>
     </div>
