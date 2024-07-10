@@ -20,11 +20,11 @@ const CreateDir = () => {
   }
 
   return (
-    <div className="createdir" onClick={() => dispatch(setPopupDisplay('none'))} style={{ display: popupDisplay }}>
-      <div className="createdir__content">
+    <div className="createdir" onClick={() => dispatch(setPopupDisplay('none'))} style={{ display: popupDisplay }} data-testid="testOutsideContent">
+      <div className="createdir__content" data-testid="testContent">
         <Popup header="Create new folder" onClick={() => dispatch(setPopupDisplay('none'))}>
-          <Input type="text" placeholder="Enter folder name..." value={dirName} onChange={(event) => setDirName(event.target.value)} />
-          <PrimaryButton onClick={() => createHandler()}>Create</PrimaryButton>
+          <Input type="text"  data-testid="createInput" placeholder="Enter folder name..." value={dirName} onChange={(event) => setDirName(event.target.value)} />
+          <PrimaryButton onClick={() => createHandler()} data-testid="createBtn">Create</PrimaryButton>
         </Popup>
       </div>
     </div>
