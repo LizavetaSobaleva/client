@@ -42,7 +42,7 @@ const FileList = () => {
           {loader && <Loader/> }
           
             {currentDir && 
-              <div className="filelist__back" onClick={() => backClickHandler()}>
+              <div className="filelist__back" data-testid="backBtn" onClick={() => backClickHandler()}>
                 <img src={backIcon} alt="" className='filelist__img'/>
                 Back
               </div>}

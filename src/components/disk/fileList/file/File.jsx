@@ -27,9 +27,6 @@ const File = ({file}) => {
       downloadFile(file)
     }
 
-    // function renameClickHandler(e) {
-    // }
-
     function deleteClickHandler(e) {
       e.stopPropagation()
       dispatch(deleteFile(file))
@@ -40,9 +37,9 @@ const File = ({file}) => {
     return (
       <div className='file' onClick={() => openHandler(file)}>
         <img src={file.type === 'dir' ? dirLogo : fileLogo} alt="" className='file__img'/>
-        <div className="file__name">{file.name}</div>
-        <div className="file__date">{file.date.slice(0, 10)}</div>
-        <div className="file__size">{file.size !== 0 && sizeFormat(file.size)}</div>
+        <div className="file__name" data-testid="fileName">{file.name}</div>
+        <div className="file__date" data-testid="fileDate">{file.date.slice(0, 10)}</div>
+        <div className="file__size" data-testid="fileSize">{file.size !== 0 && sizeFormat(file.size)}</div>
         <div className="file__actions">
           <SecondaryButton style={{padding: 8}}>
             <img src={options} alt="" className='file__menu'/>
@@ -63,7 +60,7 @@ const File = ({file}) => {
     return (
       <div className='file-plate' onClick={() => openHandler(file)}>
           <img src={file.type === 'dir' ? dirLogo : fileLogo} alt="" className='file-plate__img'/>
-          <div className="file-plate__name">{file.name}</div>
+          <div data-testid="fileName" className="file-plate__name">{file.name}</div>
           <div className="file-plate__date">{file.date.slice(0, 10)}</div>
           <div className="file-plate__size">{file.size !== 0 && sizeFormat(file.size)}</div>
           <div className="file-plate__actions">
