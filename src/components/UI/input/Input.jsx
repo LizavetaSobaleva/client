@@ -3,7 +3,7 @@ import './input.less'
 
 const Input = (props) => {
   return (
-    <input {...props} />
+    <input {...props} data-testid={props['data-testid'] || "testInput"}/>
   )
 }
 

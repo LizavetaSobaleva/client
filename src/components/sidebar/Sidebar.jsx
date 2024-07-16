@@ -33,29 +33,29 @@ const Sidebar = () => {
     
 
 
-  return (
-    <div className={`sidebar ${isOpen ? 'compressed' : ''}`}>
-        <div className="sidebar__content">
-          <NavLink to="/">
-            <div className="sidebar__header">
-              <img src={Logo} alt="" className="sidebar__logo"/>
-              <div className="sidebar__title">MERN cloud</div>
-            </div>
-          </NavLink>
-          <div className="sidebar__navigation">
-            <Navigation/>
+    return (
+      <div className={`sidebar ${isOpen ? 'compressed' : ''}`} data-testid="sidebar">
+          <div className="sidebar__content" data-testid="sidebarContent">
+              <NavLink to="/" data-testid="homeLink">
+                  <div className="sidebar__header" data-testid="sidebarHeader">
+                      <img src={Logo} alt="" className="sidebar__logo" data-testid="sidebarLogo"/>
+                      <div className="sidebar__title">MERN cloud</div>
+                  </div>
+              </NavLink>
+              <div className="sidebar__navigation" data-testid="sidebarNavigation">
+                  <Navigation />
+              </div>
+              <div className="sidebar__logout" data-testid="sidebarLogout">
+                  <SecondaryButton onClick={() => dispatch(logout())} data-testid="logoutButton">
+                      <img src={Logout} alt="" className="sidebar__logout-icon" data-testid="logoutIcon"/>
+                      <div className="sidebar__logout-text">Log out</div>
+                  </SecondaryButton>
+              </div>
           </div>
-          <div className="sidebar__logout">
-            <SecondaryButton onClick={() => dispatch(logout())}>
-              <img src={Logout} alt="" className="sidebar__logout-icon"/>
-              <div className="sidebar__logout-text">Log out</div>
-            </SecondaryButton>
+          <div className='sidebar__compressBtn' onClick={toggleDropdown} data-testid="compressButton">
+              <DropdownButton />
           </div>
-        </div>
-        <div className='sidebar__compressBtn' onClick={toggleDropdown}>
-          <DropdownButton/>
-        </div>
-    </div>
+      </div>
   )
 }
 

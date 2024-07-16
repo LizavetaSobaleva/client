@@ -11,27 +11,26 @@ const Login = () => {
     const [password, setPassword] = useState("")
     const dispatch = useDispatch()
 
-
   return (
     <div className="authorization">
       <div className="authorization__container">
-        <div className="authorization__label">
+        <div className="authorization__label" data-testid="formTitle">
           <h1>Log in to cloud</h1>
         </div>
         <div className="authorization__form">
           <div className="authorization__item">
-            <label>Email</label>
-            <Input value={email} onChange={(event) => setEmail(event.target.value)} type="email" placeholder="Enter your email" />
+            <label htmlFor="emailInput">Email</label>
+            <Input id="emailInput" value={email} onChange={(event) => setEmail(event.target.value)} type="email" placeholder="Enter your email" data-testid="emailInput" />
           </div>
 
           <div className="authorization__item">
-            <label>Password</label>
-            <Input value={password} onChange={(event) => setPassword(event.target.value)} type="password" placeholder="Enter your password" />
+            <label htmlFor="passwordInput">Password</label>
+            <Input id="passwordInput" value={password} onChange={(event) => setPassword(event.target.value)} type="password" placeholder="Enter your password" data-testid="passwordInput" />
           </div>
 
-          <PrimaryButton onClick={() => dispatch(login(email, password))}>Log in</PrimaryButton>
+          <PrimaryButton onClick={() => dispatch(login(email, password))} data-testid="loginButton">Log in</PrimaryButton>
         </div>
-        <div className="authorization__login">
+        <div className="authorization__login"  data-testid="registrationLink">
           <Link to="/registration">Create an account</Link>
         </div>
       </div>

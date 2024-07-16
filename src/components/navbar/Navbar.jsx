@@ -35,39 +35,37 @@ const Navbar = () => {
   
 
   return (
-    <div className='navbar'>
-      <div className="navbar__content">
+    <div className='navbar' data-testid="navbar">
+      <div className="navbar__content" data-testid="navbarContent">
       {!isAuth ? 
         <>
-          <div className="navbar__header">
-            <img src={Logo} alt="" className="navbar__logo"/>
+          <div className="navbar__header" data-testid="navbarHeader">
+            <img src={Logo} alt="" className="navbar__logo" data-testid="navbarLogo"/>
             <span>MERN cloud</span>
           </div>
-          <div className="navbar__btns">
-            <div className="navbar__login"><NavLink to="/login">Log in</NavLink></div>
-            <div className="navbar__registration"><NavLink to="/registration">Sign up</NavLink></div>
+          <div className="navbar__btns" data-testid="navbarButtons">
+            <div className="navbar__login" data-testid="loginButton"><NavLink to="/login">Log in</NavLink></div>
+            <div className="navbar__registration" data-testid="registerButton"><NavLink to="/registration">Sign up</NavLink></div>
           </div>
         </>
         :
         <>
-          <div className="navbar__header">
+          <div className="navbar__header" data-testid="searchHeader">
             <Input type='search' placeholder="Type to search..."
               value={searchName}
               onChange={e => searchChangeHandler(e)}
+              data-testid="searchInput"
             />
           </div>
-          <div className="navbar__user">
-            <div className="navbar__message">Hello, {currentUser.name}!</div>
+          <div className="navbar__user" data-testid="navbarUser">
+            <div className="navbar__message" data-testid="userMessage">Hello, {currentUser.name}!</div>
             <NavLink to="/profile">
-              <img src={avatar} alt="" className="navbar__avatar"/>
+              <img src={avatar} alt="" className="navbar__avatar" data-testid="userAvatar"/>
             </NavLink>
           </div>
         </>
       }
         </div>
-      
-
-        
     </div>
   )
 }

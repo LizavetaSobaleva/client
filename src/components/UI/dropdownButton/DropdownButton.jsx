@@ -10,8 +10,8 @@ const DropdownButton = () => {
     }
 
   return (
-    <div className="dropdown" onClick={toggleDropdown}>
-        <img alt="" src={down} className={`dropdown__icon ${isOpen ? 'flipped' : ''}`} />
+    <div className="dropdown"  data-testid="dropdownButton" onClick={toggleDropdown}>
+        <img alt="" src={down} data-testid="dropdownIcon" className={`dropdown__icon ${isOpen ? 'flipped' : ''}`} />
     </div>
   )
 }

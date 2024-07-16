@@ -10,7 +10,7 @@ const Popup = ({header, onClick, children, ...props}) => {
       <div className="popup__header">
         <div className="popup__title" data-testid="popupTitle">{header}</div>
         <SecondaryButton onClick={onClick} data-testid="popupCloseBtn">
-          <img src={close} alt='' className='popup__close'/>
+          <img src={close} alt='' className='popup__close'  data-testid="popupCloseIcon"/>
         </SecondaryButton>
       </div>
       {children}

@@ -28,23 +28,23 @@ const Navigation = () => {
     
 
   return (
-    <div className='navigation'>
-      <div className="navigation__item">
-      <NavLink to="/"  onClick={() => openHandler()}>
-        <div className="navigation__title">
-          <img src={Dir} alt="" className="navigation__icon"/>
+    <div className='navigation' data-testid="navigation">
+      <div className="navigation__item" data-testid="navigationItem">
+      <NavLink to="/"  onClick={() => openHandler()} data-testid="navLink">
+        <div className="navigation__title" data-testid="navigationTitle">
+          <img src={Dir} alt="" className="navigation__icon" data-testid="navigationIcon"/>
           <div className="navigation__name">My Cloud</div>
 
           {hasChildren && (
-            <div className="navigation__dropdown" onClick={toggleDropdown}>
+            <div className="navigation__dropdown" onClick={toggleDropdown} data-testid="navigationDropdown">
               <DropdownButton />
             </div>
           )}
         </div>
         </NavLink>
-        <div className={`navigation__content ${isOpen ? 'visible' : ''}`} >
+        <div className={`navigation__content ${isOpen ? 'visible' : ''}`} data-testid="navigationContent">
           {hasChildren && (
-            <div className="navigation__element">
+            <div className="navigation__element" data-testid="navigationElement">
               {dirStructure.map((dir) => 
                 <DirItem file={dir} title={dir.name} key={dir.path}/>
               )}
