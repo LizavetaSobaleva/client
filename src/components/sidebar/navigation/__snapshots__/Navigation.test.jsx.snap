@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Component renders Navigation without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="navigation"
+    data-testid="navigation"
+  >
+    <div
+      class="navigation__item"
+      data-testid="navigationItem"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        data-testid="navLink"
+        href="/"
+      >
+        <div
+          class="navigation__title"
+          data-testid="navigationTitle"
+        >
+          <img
+            alt=""
+            class="navigation__icon"
+            data-testid="navigationIcon"
+            src="test-file-stub"
+          />
+          <div
+            class="navigation__name"
+          >
+            My Cloud
+          </div>
+          <div
+            class="navigation__dropdown"
+            data-testid="navigationDropdown"
+          >
+            <div
+              class="dropdown"
+              data-testid="dropdownButton"
+            >
+              <img
+                alt=""
+                class="dropdown__icon "
+                data-testid="dropdownIcon"
+                src="test-file-stub"
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+      <div
+        class="navigation__content visible"
+        data-testid="navigationContent"
+      >
+        <div
+          class="navigation__element"
+          data-testid="navigationElement"
+        >
+          <div
+            class="diritem"
+            data-testid="dirItem-1"
+          >
+            <div
+              class="diritem__content"
+            >
+              <div
+                class="diritem__title"
+                data-testid="dirItemTitle-1"
+              >
+                Dir 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Navigation Component renders directory structure correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="navigation"
+    data-testid="navigation"
+  >
+    <div
+      class="navigation__item"
+      data-testid="navigationItem"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        data-testid="navLink"
+        href="/"
+      >
+        <div
+          class="navigation__title"
+          data-testid="navigationTitle"
+        >
+          <img
+            alt=""
+            class="navigation__icon"
+            data-testid="navigationIcon"
+            src="test-file-stub"
+          />
+          <div
+            class="navigation__name"
+          >
+            My Cloud
+          </div>
+          <div
+            class="navigation__dropdown"
+            data-testid="navigationDropdown"
+          >
+            <div
+              class="dropdown"
+              data-testid="dropdownButton"
+            >
+              <img
+                alt=""
+                class="dropdown__icon "
+                data-testid="dropdownIcon"
+                src="test-file-stub"
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+      <div
+        class="navigation__content visible"
+        data-testid="navigationContent"
+      >
+        <div
+          class="navigation__element"
+          data-testid="navigationElement"
+        >
+          <div
+            class="diritem"
+            data-testid="dirItem-1"
+          >
+            <div
+              class="diritem__content"
+            >
+              <div
+                class="diritem__title"
+                data-testid="dirItemTitle-1"
+              >
+                Dir 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Navigation Component renders navigation title and icon 1`] = `
+<DocumentFragment>
+  <div
+    class="navigation"
+    data-testid="navigation"
+  >
+    <div
+      class="navigation__item"
+      data-testid="navigationItem"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        data-testid="navLink"
+        href="/"
+      >
+        <div
+          class="navigation__title"
+          data-testid="navigationTitle"
+        >
+          <img
+            alt=""
+            class="navigation__icon"
+            data-testid="navigationIcon"
+            src="test-file-stub"
+          />
+          <div
+            class="navigation__name"
+          >
+            My Cloud
+          </div>
+          <div
+            class="navigation__dropdown"
+            data-testid="navigationDropdown"
+          >
+            <div
+              class="dropdown"
+              data-testid="dropdownButton"
+            >
+              <img
+                alt=""
+                class="dropdown__icon "
+                data-testid="dropdownIcon"
+                src="test-file-stub"
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+      <div
+        class="navigation__content visible"
+        data-testid="navigationContent"
+      >
+        <div
+          class="navigation__element"
+          data-testid="navigationElement"
+        >
+          <div
+            class="diritem"
+            data-testid="dirItem-1"
+          >
+            <div
+              class="diritem__content"
+            >
+              <div
+                class="diritem__title"
+                data-testid="dirItemTitle-1"
+              >
+                Dir 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

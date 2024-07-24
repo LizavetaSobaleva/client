@@ -50,47 +50,54 @@ const renderComponent = (file) =>
   );
 
 test('renders file without crashing', () => {
-  renderComponent(file);
+  const { asFragment } = renderComponent(file);
   const fileName = screen.getByTestId('fileName')
   expect(fileName).toHaveTextContent('Test File')
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('renders file date without crashing', () => {
-  renderComponent(file);
+  const { asFragment } = renderComponent(file);
   const fileDate = screen.getByTestId('fileDate')
   expect(fileDate).toHaveTextContent('2023-01-01')
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('renders file size without crashing', () => {
-  renderComponent(file);
+  const { asFragment } = renderComponent(file);
   const fileSize = screen.getByTestId('fileSize')
   expect(fileSize).toHaveTextContent('12.1 Kb')
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('renders directory without crashing', () => {
-  renderComponent(dir);
+  const { asFragment } = renderComponent(dir);
   const fileName = screen.getByTestId('fileName')
   expect(fileName).toHaveTextContent('Test Directory')
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('openHandler dispatches correct actions for directory', () => {
-  renderComponent(dir);
+  const { asFragment } = renderComponent(dir);
   fireEvent.click(screen.getByText('Test Directory'));
   expect(store.dispatch).toHaveBeenCalledWith(pushToStack('root'));
   expect(store.dispatch).toHaveBeenCalledWith(setCurrentDir('2'));
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('downloadClickHandler triggers downloadFile action', () => {
-  renderComponent(file);
+  const { asFragment } = renderComponent(file);
   fireEvent.click(screen.getByText('Download'));
   expect(downloadFile).toHaveBeenCalledWith(file);
+  expect(asFragment()).toMatchSnapshot();
 });
 
 
 test('deleteClickHandler triggers deleteFile action', () => {
-  renderComponent(file);
+  const { asFragment } = renderComponent(file);
   fireEvent.click(screen.getByText('Delete'));
   expect(store.dispatch).toHaveBeenCalledWith(deleteFile(file));
+  expect(asFragment()).toMatchSnapshot();
 });
 
 

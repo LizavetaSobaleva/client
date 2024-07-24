@@ -39,14 +39,16 @@ describe('App Component', () => {
   });
 
   test('renders App without crashing', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('app')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders login container when not authenticated', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('loginContainer')).toBeInTheDocument();
     expect(screen.queryByTestId('contentContainer')).not.toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders content container when authenticated', () => {
@@ -54,9 +56,10 @@ describe('App Component', () => {
       ...initialState,
       user: { isAuth: true, currentUser: { name: 'John Doe', avatar: 'avatar.png' } },
     });
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('contentContainer')).toBeInTheDocument();
     expect(screen.queryByTestId('loginContainer')).not.toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('auth action is dispatched on mount', () => {

@@ -18,7 +18,6 @@ jest.mock('../UI/popup/Popup', () => ({ header, onClick, children }) => (
   </div>
 ));
 
-
 jest.mock('../../actions/file', () => ({
   createDir: jest.fn((currentDir, dirName) => ({ type: 'CREATE_DIR', payload: { currentDir, dirName } })),
 }));
@@ -44,9 +43,10 @@ const renderComponent = () => render(
 );
 
 test('renders CreateDir without crashing', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   expect(screen.getByTestId('popupTitle')).toHaveTextContent('Create new folder');
   expect(screen.getByPlaceholderText('Enter folder name...')).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('closes popup when close button is clicked', () => {

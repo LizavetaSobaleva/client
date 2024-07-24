@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`back button works correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="filelist"
+  >
+    <div
+      class="filelist__header"
+    >
+      <div
+        class="filelist__type"
+      >
+        Type
+      </div>
+      <div
+        class="filelist__name"
+      >
+        Name
+      </div>
+      <div
+        class="filelist__date"
+      >
+        Date
+      </div>
+      <div
+        class="filelist__size"
+      >
+        File size
+      </div>
+      <div
+        class="filelist__actions"
+      />
+    </div>
+    <div
+      class="filelist__back"
+      data-testid="backBtn"
+    >
+      <img
+        alt=""
+        class="filelist__img"
+        src="test-file-stub"
+      />
+      Back
+    </div>
+    <div>
+      <div>
+        Test Directory
+      </div>
+      <div>
+        Test File 1
+      </div>
+      <div>
+        Test File 2
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`empty message is displayed when no files are present 1`] = `
+<DocumentFragment>
+  <div
+    class="filelist"
+  >
+    <div
+      class="filelist__header"
+    >
+      <div
+        class="filelist__type"
+      >
+        Type
+      </div>
+      <div
+        class="filelist__name"
+      >
+        Name
+      </div>
+      <div
+        class="filelist__date"
+      >
+        Date
+      </div>
+      <div
+        class="filelist__size"
+      >
+        File size
+      </div>
+      <div
+        class="filelist__actions"
+      />
+    </div>
+    <div
+      class="filelist__back"
+      data-testid="backBtn"
+    >
+      <img
+        alt=""
+        class="filelist__img"
+        src="test-file-stub"
+      />
+      Back
+    </div>
+    <div />
+  </div>
+  <div
+    class="filelist__empty"
+  >
+    Files not found
+  </div>
+</DocumentFragment>
+`;
+
+exports[`files are sorted by name 1`] = `
+<DocumentFragment>
+  <div
+    class="filelist"
+  >
+    <div
+      class="filelist__header"
+    >
+      <div
+        class="filelist__type"
+      >
+        Type
+      </div>
+      <div
+        class="filelist__name"
+      >
+        Name
+      </div>
+      <div
+        class="filelist__date"
+      >
+        Date
+      </div>
+      <div
+        class="filelist__size"
+      >
+        File size
+      </div>
+      <div
+        class="filelist__actions"
+      />
+    </div>
+    <div
+      class="filelist__back"
+      data-testid="backBtn"
+    >
+      <img
+        alt=""
+        class="filelist__img"
+        src="test-file-stub"
+      />
+      Back
+    </div>
+    <div>
+      <div>
+        Test Directory
+      </div>
+      <div>
+        Test File 1
+      </div>
+      <div>
+        Test File 2
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`loader is displayed correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="filelist"
+  >
+    <div
+      class="filelist__header"
+    >
+      <div
+        class="filelist__type"
+      >
+        Type
+      </div>
+      <div
+        class="filelist__name"
+      >
+        Name
+      </div>
+      <div
+        class="filelist__date"
+      >
+        Date
+      </div>
+      <div
+        class="filelist__size"
+      >
+        File size
+      </div>
+      <div
+        class="filelist__actions"
+      />
+    </div>
+    <div
+      class="loader"
+      data-testid="loader"
+    >
+      <div
+        class="loader__line"
+        data-testid="loaderLine"
+      />
+    </div>
+    <div
+      class="filelist__back"
+      data-testid="backBtn"
+    >
+      <img
+        alt=""
+        class="filelist__img"
+        src="test-file-stub"
+      />
+      Back
+    </div>
+    <div>
+      <div>
+        Test Directory
+      </div>
+      <div>
+        Test File 1
+      </div>
+      <div>
+        Test File 2
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders FileList without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="filelist"
+  >
+    <div
+      class="filelist__header"
+    >
+      <div
+        class="filelist__type"
+      >
+        Type
+      </div>
+      <div
+        class="filelist__name"
+      >
+        Name
+      </div>
+      <div
+        class="filelist__date"
+      >
+        Date
+      </div>
+      <div
+        class="filelist__size"
+      >
+        File size
+      </div>
+      <div
+        class="filelist__actions"
+      />
+    </div>
+    <div
+      class="filelist__back"
+      data-testid="backBtn"
+    >
+      <img
+        alt=""
+        class="filelist__img"
+        src="test-file-stub"
+      />
+      Back
+    </div>
+    <div>
+      <div>
+        Test Directory
+      </div>
+      <div>
+        Test File 1
+      </div>
+      <div>
+        Test File 2
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

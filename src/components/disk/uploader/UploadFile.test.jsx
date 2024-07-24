@@ -32,13 +32,15 @@ const renderComponent = () => render(
 );
 
 test('renders UploadFile without crashing', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   expect(screen.getByTestId('fileName')).toHaveTextContent('file1.txt');
   expect(screen.getByTestId('progressBar')).toHaveTextContent('50%');
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('close button triggers removeUploadFile action', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   fireEvent.click(screen.getByTestId('closeBtn'));
   expect(store.dispatch).toHaveBeenCalledWith(removeUploadFile('1'));
+  expect(asFragment()).toMatchSnapshot();
 });

@@ -28,15 +28,17 @@ describe('Navigation Component', () => {
   });
 
   test('renders Navigation without crashing', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('navigation')).toBeInTheDocument();
     expect(screen.getByTestId('navigationItem')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders navigation title and icon', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('navigationTitle')).toHaveTextContent('My Cloud');
     expect(screen.getByTestId('navigationIcon')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('opens and closes dropdown correctly', () => {
@@ -59,8 +61,9 @@ describe('Navigation Component', () => {
   });
 
   test('renders directory structure correctly', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('navigationElement')).toBeInTheDocument();
     expect(screen.getByText('Dir 1')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component renders Navbar without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+    data-testid="navbar"
+  >
+    <div
+      class="navbar__content"
+      data-testid="navbarContent"
+    >
+      <div
+        class="navbar__header"
+        data-testid="navbarHeader"
+      >
+        <img
+          alt=""
+          class="navbar__logo"
+          data-testid="navbarLogo"
+          src="test-file-stub"
+        />
+        <span>
+          MERN cloud
+        </span>
+      </div>
+      <div
+        class="navbar__btns"
+        data-testid="navbarButtons"
+      >
+        <div
+          class="navbar__login"
+          data-testid="loginButton"
+        >
+          <a
+            class=""
+            href="/login"
+          >
+            Log in
+          </a>
+        </div>
+        <div
+          class="navbar__registration"
+          data-testid="registerButton"
+        >
+          <a
+            class=""
+            href="/registration"
+          >
+            Sign up
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Navbar Component renders login and register buttons when user is not authenticated 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+    data-testid="navbar"
+  >
+    <div
+      class="navbar__content"
+      data-testid="navbarContent"
+    >
+      <div
+        class="navbar__header"
+        data-testid="navbarHeader"
+      >
+        <img
+          alt=""
+          class="navbar__logo"
+          data-testid="navbarLogo"
+          src="test-file-stub"
+        />
+        <span>
+          MERN cloud
+        </span>
+      </div>
+      <div
+        class="navbar__btns"
+        data-testid="navbarButtons"
+      >
+        <div
+          class="navbar__login"
+          data-testid="loginButton"
+        >
+          <a
+            class=""
+            href="/login"
+          >
+            Log in
+          </a>
+        </div>
+        <div
+          class="navbar__registration"
+          data-testid="registerButton"
+        >
+          <a
+            class=""
+            href="/registration"
+          >
+            Sign up
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Navbar Component renders search input and user info when user is authenticated 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+    data-testid="navbar"
+  >
+    <div
+      class="navbar__content"
+      data-testid="navbarContent"
+    >
+      <div
+        class="navbar__header"
+        data-testid="searchHeader"
+      >
+        <input
+          data-testid="searchInput"
+          placeholder="Type to search..."
+          type="search"
+          value=""
+        />
+      </div>
+      <div
+        class="navbar__user"
+        data-testid="navbarUser"
+      >
+        <div
+          class="navbar__message"
+          data-testid="userMessage"
+        >
+          Hello, John Doe!
+        </div>
+        <a
+          class=""
+          href="/profile"
+        >
+          <img
+            alt=""
+            class="navbar__avatar"
+            data-testid="userAvatar"
+            src="test-file-stub"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

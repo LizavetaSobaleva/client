@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders UploadInput without crashing 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="upload"
+      data-testid="uploadArea"
+    >
+      <label
+        class="upload__label"
+        for="upload-input"
+      >
+        <img
+          alt=""
+          class="upload__img"
+          src="test-file-stub"
+        />
+        <div
+          class="upload__message"
+          data-testid="uploadMessage"
+        >
+          Click and choose or drag files to this area to upload
+        </div>
+      </label>
+      <input
+        class="upload__input"
+        id="upload-input"
+        multiple=""
+        type="file"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

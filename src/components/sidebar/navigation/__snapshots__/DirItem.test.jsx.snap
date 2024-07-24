@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DirItem Component renders DirItem without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="diritem"
+    data-testid="dirItem-1"
+  >
+    <div
+      class="diritem__content"
+    >
+      <div
+        class="diritem__title"
+        data-testid="dirItemTitle-1"
+      >
+        Root
+      </div>
+      <div
+        class="diritem__dropdown"
+        data-testid="dirItemDropdown-1"
+      >
+        <div
+          class="dropdown"
+          data-testid="dropdownButton"
+        >
+          <img
+            alt=""
+            class="dropdown__icon "
+            data-testid="dropdownIcon"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="diritem__subitem "
+      data-testid="dirItemSubItem-1"
+    >
+      <div
+        class="diritem"
+        data-testid="dirItem-2"
+      >
+        <div
+          class="diritem__content"
+        >
+          <div
+            class="diritem__title"
+            data-testid="dirItemTitle-2"
+          >
+            Child 1
+          </div>
+        </div>
+      </div>
+      <div
+        class="diritem"
+        data-testid="dirItem-3"
+      >
+        <div
+          class="diritem__content"
+        >
+          <div
+            class="diritem__title"
+            data-testid="dirItemTitle-3"
+          >
+            Child 2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DirItem Component renders dropdown button if there are children 1`] = `
+<DocumentFragment>
+  <div
+    class="diritem"
+    data-testid="dirItem-1"
+  >
+    <div
+      class="diritem__content"
+    >
+      <div
+        class="diritem__title"
+        data-testid="dirItemTitle-1"
+      >
+        Root
+      </div>
+      <div
+        class="diritem__dropdown"
+        data-testid="dirItemDropdown-1"
+      >
+        <div
+          class="dropdown"
+          data-testid="dropdownButton"
+        >
+          <img
+            alt=""
+            class="dropdown__icon "
+            data-testid="dropdownIcon"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="diritem__subitem "
+      data-testid="dirItemSubItem-1"
+    >
+      <div
+        class="diritem"
+        data-testid="dirItem-2"
+      >
+        <div
+          class="diritem__content"
+        >
+          <div
+            class="diritem__title"
+            data-testid="dirItemTitle-2"
+          >
+            Child 1
+          </div>
+        </div>
+      </div>
+      <div
+        class="diritem"
+        data-testid="dirItem-3"
+      >
+        <div
+          class="diritem__content"
+        >
+          <div
+            class="diritem__title"
+            data-testid="dirItemTitle-3"
+          >
+            Child 2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

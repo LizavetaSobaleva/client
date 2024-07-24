@@ -39,15 +39,17 @@ describe('Navbar Component', () => {
   });
 
   test('renders Navbar without crashing', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('navbar')).toBeInTheDocument();
     expect(screen.getByTestId('navbarContent')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders login and register buttons when user is not authenticated', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('loginButton')).toBeInTheDocument();
     expect(screen.getByTestId('registerButton')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders search input and user info when user is authenticated', () => {
@@ -55,9 +57,10 @@ describe('Navbar Component', () => {
       user: { isAuth: true, currentUser: { name: 'John Doe', avatar: null } },
       files: { currentDir: 'root' },
     });
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('searchInput')).toBeInTheDocument();
     expect(screen.getByTestId('userMessage')).toHaveTextContent('Hello, John Doe!');
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('search input triggers searchFiles action', () => {

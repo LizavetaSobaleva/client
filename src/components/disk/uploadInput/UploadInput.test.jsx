@@ -33,9 +33,10 @@ const renderComponent = () =>
   );
 
 test('renders UploadInput without crashing', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   expect(screen.getByTestId('uploadArea')).toBeInTheDocument();
   expect(screen.getByTestId('uploadMessage')).toHaveTextContent('Click and choose or drag files to this area to upload');
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('calls fileUploadHandler on file input change', () => {

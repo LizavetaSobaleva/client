@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders CreateDir without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="createdir"
+    data-testid="testOutsideContent"
+    style="display: block;"
+  >
+    <div
+      class="createdir__content"
+      data-testid="testContent"
+    >
+      <div
+        class="popup"
+        data-testid="popup"
+      >
+        <div
+          class="popup__header"
+        >
+          <div
+            class="popup__title"
+            data-testid="popupTitle"
+          >
+            Create new folder
+          </div>
+          <button
+            data-testid="popupCloseBtn"
+          >
+            Close
+          </button>
+        </div>
+        <div>
+          <input
+            data-testid="createInput"
+            placeholder="Enter folder name..."
+            type="text"
+            value=""
+          />
+          <button
+            class="primaryButton"
+            data-testid="createBtn"
+          >
+            Create
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

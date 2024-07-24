@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`close button triggers removeUploadFile action 1`] = `
+<DocumentFragment>
+  <div
+    class="uploadFile"
+  >
+    <img
+      alt=""
+      class="uploadFile__img"
+      src="test-file-stub"
+    />
+    <div
+      class="uploadFile__content"
+    >
+      <div
+        class="uploadFile__name"
+        data-testid="fileName"
+      >
+        file1.txt
+      </div>
+      <div
+        data-testid="progressBar"
+      >
+        50%
+      </div>
+    </div>
+    <button
+      class="secondaryButton"
+      data-testid="closeBtn"
+    >
+      <img
+        alt=""
+        class="popup__close"
+        src="test-file-stub"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders UploadFile without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="uploadFile"
+  >
+    <img
+      alt=""
+      class="uploadFile__img"
+      src="test-file-stub"
+    />
+    <div
+      class="uploadFile__content"
+    >
+      <div
+        class="uploadFile__name"
+        data-testid="fileName"
+      >
+        file1.txt
+      </div>
+      <div
+        data-testid="progressBar"
+      >
+        50%
+      </div>
+    </div>
+    <button
+      class="secondaryButton"
+      data-testid="closeBtn"
+    >
+      <img
+        alt=""
+        class="popup__close"
+        src="test-file-stub"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

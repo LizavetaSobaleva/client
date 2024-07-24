@@ -48,17 +48,19 @@ const renderComponent = () => render(
 );
 
 test('renders Uploader without crashing', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   expect(screen.getByTestId('popupTitle')).toHaveTextContent('Uploaded files');
   files.forEach(file => {
     expect(screen.getByTestId(`file-${file.id}`)).toBeInTheDocument();
   });
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('hides Uploader when close button is clicked', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   fireEvent.click(screen.getByTestId('popupCloseBtn'));
   expect(store.dispatch).toHaveBeenCalledWith(hideUploader());
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('does not render Uploader when isVisible is false', () => {

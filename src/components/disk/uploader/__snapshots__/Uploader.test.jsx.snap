@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hides Uploader when close button is clicked 1`] = `
+<DocumentFragment>
+  <div
+    class="uploader"
+  >
+    <div
+      class="popup"
+    >
+      <div
+        class="popup__header"
+      >
+        <div
+          class="popup__title"
+          data-testid="popupTitle"
+        >
+          Uploaded files
+        </div>
+        <button
+          data-testid="popupCloseBtn"
+        >
+          Close
+        </button>
+      </div>
+      <div>
+        <div
+          class="uploader__content"
+        >
+          <div
+            data-testid="file-1"
+          >
+            file1.txt
+          </div>
+          <div
+            data-testid="file-2"
+          >
+            file2.jpg
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders Uploader without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="uploader"
+  >
+    <div
+      class="popup"
+    >
+      <div
+        class="popup__header"
+      >
+        <div
+          class="popup__title"
+          data-testid="popupTitle"
+        >
+          Uploaded files
+        </div>
+        <button
+          data-testid="popupCloseBtn"
+        >
+          Close
+        </button>
+      </div>
+      <div>
+        <div
+          class="uploader__content"
+        >
+          <div
+            data-testid="file-1"
+          >
+            file1.txt
+          </div>
+          <div
+            data-testid="file-2"
+          >
+            file2.jpg
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

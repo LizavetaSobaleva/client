@@ -45,9 +45,10 @@ describe('DirItem Component', () => {
   });
 
   test('renders DirItem without crashing', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('dirItem-1')).toBeInTheDocument();
     expect(screen.getByTestId('dirItemTitle-1')).toHaveTextContent('Root');
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('calls openHandler when title is clicked', () => {
@@ -59,8 +60,9 @@ describe('DirItem Component', () => {
   });
 
   test('renders dropdown button if there are children', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('dirItemDropdown-1')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('toggles subitems visibility when dropdown button is clicked', () => {

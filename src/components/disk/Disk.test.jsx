@@ -44,21 +44,24 @@ const renderComponent = () =>
   );
 
 test('renders Create folder button without crashing', () => {
-  renderComponent();
-  const createButton = screen.getByTestId('diskCreateBtn')
+  const { asFragment } = renderComponent();
+  const createButton = screen.getByTestId('diskCreateBtn');
   expect(createButton).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('renders ListView button without crashing', () => {
-    renderComponent();
-    const listViewButton = screen.getByTestId('listViewBtn')
-    expect(listViewButton).toBeInTheDocument();
+  const { asFragment } = renderComponent();
+  const listViewButton = screen.getByTestId('listViewBtn');
+  expect(listViewButton).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });
 
-test('renders ListView button without crashing', () => {
-    renderComponent();
-    const plateViewButton = screen.getByTestId('plateViewBtn')
-    expect(plateViewButton).toBeInTheDocument();
+test('renders PlateView button without crashing', () => {
+  const { asFragment } = renderComponent();
+  const plateViewButton = screen.getByTestId('plateViewBtn');
+  expect(plateViewButton).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('create folder button opens the popup', () => {

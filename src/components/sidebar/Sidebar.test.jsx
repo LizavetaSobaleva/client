@@ -29,22 +29,25 @@ describe('Sidebar Component', () => {
   });
 
   test('renders Sidebar without crashing', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     expect(screen.getByTestId('sidebarContent')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders sidebar header with logo and title', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('sidebarHeader')).toBeInTheDocument();
     expect(screen.getByTestId('sidebarLogo')).toBeInTheDocument();
     expect(screen.getByText('MERN cloud')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders navigation and logout button', () => {
-    renderComponent(store);
+    const { asFragment } = renderComponent(store);
     expect(screen.getByTestId('sidebarNavigation')).toBeInTheDocument();
     expect(screen.getByTestId('sidebarLogout')).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('logout button triggers logout action', () => {

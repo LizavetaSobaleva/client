@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration Component renders Registration form without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="authorization"
+  >
+    <div
+      class="authorization__container"
+    >
+      <div
+        class="authorization__label"
+        data-testid="formTitle"
+      >
+        <h1>
+          Create your account
+        </h1>
+      </div>
+      <div
+        class="authorization__form"
+      >
+        <div
+          class="authorization__item"
+        >
+          <label
+            for="nameInput"
+          >
+            Name
+          </label>
+          <input
+            data-testid="nameInput"
+            id="nameInput"
+            placeholder="Enter your full name"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="authorization__item"
+        >
+          <label
+            for="emailInput"
+          >
+            Email
+          </label>
+          <input
+            data-testid="emailInput"
+            id="emailInput"
+            placeholder="Enter your email"
+            type="email"
+            value=""
+          />
+        </div>
+        <div
+          class="authorization__item"
+        >
+          <label
+            for="passwordInput"
+          >
+            Password
+          </label>
+          <input
+            data-testid="passwordInput"
+            id="passwordInput"
+            placeholder="Enter your password"
+            type="password"
+            value=""
+          />
+        </div>
+        <button
+          class="primaryButton"
+          data-testid="registerButton"
+        >
+          Create Account
+        </button>
+      </div>
+      <div
+        class="authorization__login"
+        data-testid="loginLink"
+      >
+        Already have an account? 
+        <a
+          href="/login"
+        >
+          Log in
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

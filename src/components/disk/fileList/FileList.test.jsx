@@ -41,10 +41,11 @@ const renderComponent = () => render(
 );
 
 test('renders FileList without crashing', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   expect(screen.getByText('Test File 1')).toBeInTheDocument();
   expect(screen.getByText('Test File 2')).toBeInTheDocument();
   expect(screen.getByText('Test Directory')).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('back button works correctly', () => {
@@ -61,11 +62,12 @@ test('back button works correctly', () => {
   });
   store.dispatch = jest.fn();
   
-  renderComponent();
+  const { asFragment } = renderComponent();
   const backButton = screen.getByTestId('backBtn');
   fireEvent.click(backButton);
   expect(store.dispatch).toHaveBeenCalledWith(popFromStack('2'));
   expect(store.dispatch).toHaveBeenCalledWith(setCurrentDir('root'));
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('loader is displayed correctly', () => {
@@ -81,16 +83,18 @@ test('loader is displayed correctly', () => {
     }
   });
   
-  renderComponent();
+  const { asFragment } = renderComponent();
   expect(screen.getByTestId('loader')).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('files are sorted by name', () => {
-  renderComponent();
+  const { asFragment } = renderComponent();
   const fileElements = screen.getAllByText(/Test File|Test Directory/);
   expect(fileElements[0]).toHaveTextContent('Test Directory');
   expect(fileElements[1]).toHaveTextContent('Test File 1');
   expect(fileElements[2]).toHaveTextContent('Test File 2');
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('empty message is displayed when no files are present', () => {
@@ -106,6 +110,7 @@ test('empty message is displayed when no files are present', () => {
     }
   });
 
-  renderComponent();
+  const { asFragment } = renderComponent();
   expect(screen.getByText('Files not found')).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });
