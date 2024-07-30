@@ -1,3 +1,10 @@
+## DEMO: https://client-0y7p.onrender.com/
+This is a cloud storage application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to securely store and manage their files in the cloud.
+
+For deployment, I separated the client and server parts into two different repositories. I am also updating these repositories and adding tests to them.
+### [Entire project](https://github.com/LizavetaSobaleva/MERN_cloud)
+### [Server](https://github.com/LizavetaSobaleva/server)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
