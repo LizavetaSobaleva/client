@@ -30,7 +30,7 @@ exports[`Navbar Component renders Navbar without crashing 1`] = `
       >
         <div
           class="navbar__login"
-          data-testid="loginButton"
+          data-testid="loginButtonLink"
         >
           <a
             class=""
@@ -41,7 +41,7 @@ exports[`Navbar Component renders Navbar without crashing 1`] = `
         </div>
         <div
           class="navbar__registration"
-          data-testid="registerButton"
+          data-testid="registerButtonLink"
         >
           <a
             class=""
@@ -86,7 +86,7 @@ exports[`Navbar Component renders login and register buttons when user is not au
       >
         <div
           class="navbar__login"
-          data-testid="loginButton"
+          data-testid="loginButtonLink"
         >
           <a
             class=""
@@ -97,7 +97,7 @@ exports[`Navbar Component renders login and register buttons when user is not au
         </div>
         <div
           class="navbar__registration"
-          data-testid="registerButton"
+          data-testid="registerButtonLink"
         >
           <a
             class=""

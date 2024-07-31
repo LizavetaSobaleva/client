@@ -47,8 +47,8 @@ describe('Navbar Component', () => {
 
   test('renders login and register buttons when user is not authenticated', () => {
     const { asFragment } = renderComponent(store);
-    expect(screen.getByTestId('loginButton')).toBeInTheDocument();
-    expect(screen.getByTestId('registerButton')).toBeInTheDocument();
+    expect(screen.getByTestId('loginButtonLink')).toBeInTheDocument();
+    expect(screen.getByTestId('registerButtonLink')).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 

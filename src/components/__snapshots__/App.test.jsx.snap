@@ -38,7 +38,7 @@ exports[`App Component renders App without crashing 1`] = `
           >
             <div
               class="navbar__login"
-              data-testid="loginButton"
+              data-testid="loginButtonLink"
             >
               <a
                 aria-current="page"
@@ -50,7 +50,7 @@ exports[`App Component renders App without crashing 1`] = `
             </div>
             <div
               class="navbar__registration"
-              data-testid="registerButton"
+              data-testid="registerButtonLink"
             >
               <a
                 class=""
@@ -506,7 +506,7 @@ exports[`App Component renders login container when not authenticated 1`] = `
           >
             <div
               class="navbar__login"
-              data-testid="loginButton"
+              data-testid="loginButtonLink"
             >
               <a
                 aria-current="page"
@@ -518,7 +518,7 @@ exports[`App Component renders login container when not authenticated 1`] = `
             </div>
             <div
               class="navbar__registration"
-              data-testid="registerButton"
+              data-testid="registerButtonLink"
             >
               <a
                 class=""

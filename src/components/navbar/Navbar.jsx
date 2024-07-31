@@ -44,8 +44,8 @@ const Navbar = () => {
             <span>MERN cloud</span>
           </div>
           <div className="navbar__btns" data-testid="navbarButtons">
-            <div className="navbar__login" data-testid="loginButton"><NavLink to="/login">Log in</NavLink></div>
-            <div className="navbar__registration" data-testid="registerButton"><NavLink to="/registration">Sign up</NavLink></div>
+            <div className="navbar__login" data-testid="loginButtonLink"><NavLink to="/login">Log in</NavLink></div>
+            <div className="navbar__registration" data-testid="registerButtonLink"><NavLink to="/registration">Sign up</NavLink></div>
           </div>
         </>
         :
