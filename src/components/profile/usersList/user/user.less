@@ -1,0 +1,105 @@
+@import '../../../../utils/colors.less';
+
+@import '../../../../utils/colors.less';
+
+.user {
+    padding: 8px 12px;
+    border-bottom: 1px solid @lightgrey;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr 2fr 0.5fr;
+    color: @subtext;
+    font-weight: 400;
+    align-items: center;
+    transition: ease-in 50ms all;
+
+    &:hover {
+        background-color: #f9fafc;
+    }
+
+    &__name {
+        grid-column-start: 1;
+        width: 98%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__email {
+        grid-column-start: 2;
+        width: 98%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__status {
+        grid-column-start: 3;
+        justify-self: center;
+
+        select {
+            padding: 4px 16px;
+            border: none;
+            border-radius: 16px;
+            background-color: #f9fafc;
+            color: @primary;
+            font-size: 16px;
+            cursor: pointer;
+        
+            &:focus {
+              outline: none;
+            }
+          }
+    }
+
+    &__size {
+        grid-column-start: 4;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        padding: 4px 20px;
+
+        .progressBar {
+            width: auto;
+            padding: 4px 0;
+
+            &__line, &__upload {
+                height: 8px;
+            }
+
+            &__percent {
+                display: none;
+            }
+        }
+    }
+
+    &__actions {
+        grid-column-start: 5;
+
+        .primaryButton {
+            padding: 8px 24px;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px){
+    .user {
+        grid-template-columns: 1.5fr 2fr 2fr;
+
+        &__name {
+            margin-left: 4px;
+        }
+
+        &__email {
+            display: none
+        }
+
+        &__status {
+            grid-column-start: 2;
+        }
+    
+        &__size {
+            grid-column-start: 3;
+        }
+    }
+}

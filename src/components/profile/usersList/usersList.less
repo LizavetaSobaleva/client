@@ -1,0 +1,72 @@
+@import '../../../utils/colors.less';
+
+.users {
+    margin: 12px 20px 20px 20px;
+    border: 1px solid @lightgrey;
+    border-radius: 8px;
+    position: relative;
+
+    .loader {
+        top: 40;
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 2fr 2fr 0.5fr;
+        padding: 12px 12px;
+        background-color: @lightgrey;
+        color: @subtext;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: default;
+        position: sticky;
+        top: -14px;
+    }
+
+    &__name {
+        grid-column-start: 1;
+    }
+
+    &__email {
+        grid-column-start: 2;
+    }
+
+    &__status {
+        grid-column-start: 3;
+        justify-self: center;
+    }
+
+    &__size {
+        grid-column-start: 4;
+        justify-self: center;
+    }
+
+    &__empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: @subtext;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    .users {
+        &__header {
+            grid-template-columns: 1.5fr 2fr 2fr;
+        }
+        &__email {
+            display: none
+        }
+
+        &__status {
+            grid-column-start: 2;
+            justify-self: center;
+        }
+    
+        &__size {
+            grid-column-start: 3;
+            justify-self: center;
+        }
+
+    }
+}

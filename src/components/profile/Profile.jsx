@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './profile.less'
 import { useDispatch, useSelector } from 'react-redux'
 import avatarLogo from '../../assets/img/user_primary.svg'
 import sizeFormat from '../../utils/sizeFormat'
 import SecondaryButton from '../UI/secondaryButton/SecondaryButton'
 import ProgressBar from '../UI/progressBar/ProgressBar'
-import { deleteAvatar, uploadAvatar } from '../../actions/user'
+import { deleteAvatar, getAllUsers, uploadAvatar } from '../../actions/user'
 import backIcon from "../../assets/img/back.png"
 import { logout } from '../../reducers/userReducer'
 import { NavLink } from 'react-router-dom'
+import UsersList from './usersList/UsersList'
+import Label from '../UI/label/Label'
 
 
 const Profile = () => {
@@ -18,6 +20,8 @@ const Profile = () => {
     const usedSpace = ((currentUser.usedSpace / currentUser.diskSpace) * 100).toFixed()
     const dispatch = useDispatch()
 
+    const [users, setUsers] = useState([])
+
     const handleUploadButtonClick = () => {
         document.getElementById('avatarInput').click();
     }
@@ -26,6 +30,17 @@ const Profile = () => {
         const file = e.target.files[0]
         dispatch(uploadAvatar(file))
     }
+    
+    const fetchUsers = async () => {
+        if (currentUser.status === 'admin') {
+            const fetchedUsers = await getAllUsers();
+            setUsers(fetchedUsers);
+        }
+    };
+
+    useEffect(() => {
+        fetchUsers();
+    }, [currentUser.status]);
 
   return (
     <>
@@ -47,6 +62,9 @@ const Profile = () => {
 
             <div className="profile__content">
                 <div className="profile__name">{currentUser.name}</div>
+                <div className="profile__status">
+                    <Label status={currentUser.status}>{currentUser.status}</Label>
+                </div>
                 <div className="profile__email">{currentUser.email}</div>
                 <div className="profile__diskSpace">
                     Used space:
@@ -57,6 +75,11 @@ const Profile = () => {
                 </div>
             </div>
         </div>
+
+        {currentUser.status === 'admin' && (
+                <UsersList users={users}  fetchUsers={fetchUsers} />
+        )}
+
         <div className="profile__logout" onClick={() => dispatch(logout())}>
             <SecondaryButton>
                 Log out

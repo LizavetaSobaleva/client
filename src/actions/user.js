@@ -76,3 +76,27 @@ export const deleteAvatar = () => {
           }
      }
 }
+
+export const getAllUsers = async () => {
+     try {
+         const response = await instanceAxios.get('admin/users', {
+             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+         });
+         return response.data;
+     } catch (e) {
+         console.log("Error fetching users:", e.response?.data?.message || e.message);
+     }
+ } 
+
+ export const changeUserStatus = (userId, status) => {
+     return async (dispatch) => {
+         try {
+             const response = await instanceAxios.put('admin/changeStatus', { userId, status }, {
+                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+             });
+             console.log('Status updated successfully');
+         } catch (e) {
+             console.log('Failed to update status', e);
+         }
+     };
+ }; 

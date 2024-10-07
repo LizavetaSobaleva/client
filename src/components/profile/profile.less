@@ -6,6 +6,7 @@
     border: 1px solid @borders;
     border-radius: 8px;
     display: flex;
+    position: relative;
 
     &__header {
         display: flex;
@@ -32,10 +33,18 @@
 
     &__content {
         padding: 12px 20px;
+        
+        
     }
 
     &__name {
         font-size: 20px;
+    }
+
+    &__status {
+        position: absolute;
+        top: 8px;
+        right: 8px;
     }
 
     &__email {
