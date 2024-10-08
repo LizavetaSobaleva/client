@@ -7,6 +7,7 @@ import { changeUserStatus } from "../../../../actions/user";
 import PrimaryButton from "../../../UI/primaryButton/PrimaryButton";
 import SecondaryButton from "../../../UI/secondaryButton/SecondaryButton";
 import Label from "../../../UI/label/Label";
+import Selector from "../../../UI/selector/Selector";
 
 const User = ({ user, fetchUsers }) => {
   const dispatch = useDispatch();
@@ -14,15 +15,21 @@ const User = ({ user, fetchUsers }) => {
   const [status, setStatus] = useState(user.status);
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleStatusChange = (e) => {
-    setStatus(e.target.value);
+  const handleStatusChange = (newStatus) => {
+    setStatus(newStatus);
   };
 
   const handleSave = async () => {
-    await dispatch(changeUserStatus(user._id, status)); 
+    await dispatch(changeUserStatus(user._id, status));
     setIsEditing(false);
     fetchUsers();
   };
+
+  const statusOptions = [
+    { value: 'standard', label: 'standard' },
+    { value: 'premium', label: 'premium' },
+    { value: 'admin', label: 'admin' },
+  ];
 
   return (
     <div className="user">
@@ -31,11 +38,7 @@ const User = ({ user, fetchUsers }) => {
 
       <div className="user__status">
         {isEditing ? (
-          <select className="user__status-select" value={status} onChange={handleStatusChange}>
-            <option value="standard">standard</option>
-            <option value="premium">premium</option>
-            <option value="admin">admin</option>
-          </select>
+          <Selector value={status} options={statusOptions} onChange={handleStatusChange} />
         ) : (
           <Label status={user.status}>{user.status}</Label>
         )}
@@ -48,13 +51,9 @@ const User = ({ user, fetchUsers }) => {
 
       <div className="user__actions">
         {isEditing ? (
-          <PrimaryButton onClick={handleSave}>
-            Save
-          </PrimaryButton>
+          <PrimaryButton onClick={handleSave}>Save</PrimaryButton>
         ) : (
-          <SecondaryButton onClick={() => setIsEditing(true)}>
-            Edit
-          </SecondaryButton>
+          <SecondaryButton onClick={() => setIsEditing(true)}>Edit</SecondaryButton>
         )}
       </div>
     </div>

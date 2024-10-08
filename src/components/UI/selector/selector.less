@@ -1,0 +1,83 @@
+@import "../../../utils/colors.less";
+
+.selector {
+  position: relative;
+  width: auto;
+
+  &__trigger {
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 4px 16px;
+    border-radius: 16px;
+    border: 1px solid @grey;
+    background-color: @background-color;
+    color: @text;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      border-color: @primary;
+    }
+
+    .arrow {
+      margin-left: 12px;
+      margin-top: 2px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid @text;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 4px;
+    border: 1px solid @grey;
+    border-radius: 16px;
+    background-color: @background-color;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 10;
+  }
+
+  &__option {
+    width: 100%;
+    padding: 6px 16px;
+    cursor: pointer;
+    color: @subtext;
+    background-color: @background-color;
+    transition: background-color 0.2s ease;
+
+    &.standard {
+      &:hover {
+        background-color: @lightgrey;
+        color: @subtext;
+      }
+    }
+
+    &.premium {
+      &:hover {
+        background-color: @secondary-20;
+        color: @secondary;
+      }
+    }
+
+    &.admin {
+      &:hover {
+        background-color: @primary-20;
+        color: @primary-dark;
+      }
+    }
+  }
+}
