@@ -49,7 +49,7 @@ const UploadInput = () => {
               <input onChange={(event) => fileUploadHandler(event)} multiple={true} type="file" id="upload-input" className="upload__input"/>
             </div>
             :
-            <div className="drop-area" data-testid="uploadDropArea" onDrop={dropHandler} onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
+            <div className="upload__drop-area" data-testid="uploadDropArea" onDrop={dropHandler} onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
               <img src={plus} alt="" className='upload__img'/>
                 Drop files to this area to upload
             </div>

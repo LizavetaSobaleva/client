@@ -3,10 +3,9 @@ import "./usersList.less";
 import User from "./user/User";
 
 const UsersList = ({ users, fetchUsers }) => {
-
   return (
     <>
-      <div className="users">
+      <div className="users" data-testid="usersList">
         <div className="users__header">
           <div className="users__name">Name</div>
           <div className="users__email">Email</div>
@@ -24,7 +23,7 @@ const UsersList = ({ users, fetchUsers }) => {
               />
             ))
           ) : (
-            <div>No users found</div>
+            <div data-testid="noUsersMessage">No users found</div>
           )}
         </div>
       </div>

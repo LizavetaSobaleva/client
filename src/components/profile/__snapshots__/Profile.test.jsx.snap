@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersList Component renders profile component without crashing 1`] = `
+<DocumentFragment>
+  <a
+    aria-current="page"
+    class="active"
+    href="/"
+  >
+    <div
+      class="profile__back"
+      data-testid="profile-back"
+    >
+      <img
+        alt=""
+        class="profile__img"
+        src="test-file-stub"
+      />
+    </div>
+  </a>
+  <div
+    class="profile"
+    data-testid="profile"
+  >
+    <div
+      class="profile__avatar"
+      data-testid="profile-avatar"
+    >
+      <img
+        alt=""
+        class="profile__image"
+        src="test-file-stub"
+      />
+      <input
+        accept="image/*"
+        data-testid="avatar-input"
+        id="avatarInput"
+        type="file"
+      />
+      <label
+        for="avatarInput"
+      >
+        <button
+          class="secondaryButton"
+          data-testid="upload-avatar-btn"
+        >
+          Upload avatar
+        </button>
+      </label>
+    </div>
+    <div
+      class="profile__content"
+      data-testid="profile-content"
+    >
+      <div
+        class="profile__name"
+        data-testid="profile-name"
+      >
+        Test User
+      </div>
+      <div
+        class="profile__status"
+        data-testid="profile-status"
+      >
+        <div
+          class="label standard"
+          data-testid="label"
+        >
+          standard
+        </div>
+      </div>
+      <div
+        class="profile__email"
+        data-testid="profile-email"
+      >
+        test@example.com
+      </div>
+      <div
+        class="profile__diskSpace"
+        data-testid="profile-disk-space"
+      >
+        Used space:
+        <div
+          class="profile__data"
+          data-testid="profile-used-space"
+        >
+          50.0 Mb from 100.0 Mb
+          <div
+            class="progressBar"
+            data-testid="progressBar"
+          >
+            <div
+              class="progressBar__line"
+              data-testid="progressBarLine"
+            >
+              <div
+                class="progressBar__upload"
+                data-testid="progressBarUpload"
+                style="width: 50%;"
+              />
+            </div>
+            <div
+              class="progressBar__percent"
+              data-testid="progressBarPercent"
+              style="margin-right: 50%;"
+            >
+              50%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="profile__logout"
+    data-testid="logout-btn"
+  >
+    <button
+      class="secondaryButton"
+      data-testid="secondaryButton"
+    >
+      Log out
+    </button>
+  </div>
+</DocumentFragment>
+`;

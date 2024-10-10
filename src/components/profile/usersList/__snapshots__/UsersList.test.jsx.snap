@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersList Component renders UsersList without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="users"
+    data-testid="usersList"
+  >
+    <div
+      class="users__header"
+    >
+      <div
+        class="users__name"
+      >
+        Name
+      </div>
+      <div
+        class="users__email"
+      >
+        Email
+      </div>
+      <div
+        class="users__status"
+      >
+        Status
+      </div>
+      <div
+        class="users__size"
+      >
+        Used space
+      </div>
+    </div>
+    <div
+      class="users__list"
+    >
+      <div>
+        Test User 1
+      </div>
+      <div>
+        Test User 2
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

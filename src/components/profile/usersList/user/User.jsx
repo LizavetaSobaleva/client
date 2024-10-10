@@ -32,28 +32,33 @@ const User = ({ user, fetchUsers }) => {
   ];
 
   return (
-    <div className="user">
-      <div className="user__name">{user.name}</div>
-      <div className="user__email">{user.email}</div>
+    <div className="user" data-testid="user">
+      <div className="user__name" data-testid="userName">{user.name}</div>
+      <div className="user__email" data-testid="userEmail">{user.email}</div>
 
-      <div className="user__status">
+      <div className="user__status" data-testid="userStatus">
         {isEditing ? (
-          <Selector value={status} options={statusOptions} onChange={handleStatusChange} />
+          <Selector
+            value={status}
+            options={statusOptions}
+            onChange={handleStatusChange}
+            data-testid="statusSelector"
+          />
         ) : (
-          <Label status={user.status}>{user.status}</Label>
+          <Label status={user.status} data-testid="userLabel">{user.status}</Label>
         )}
       </div>
 
-      <div className="user__size">
+      <div className="user__size" data-testid="userSize">
         {sizeFormat(user.usedSpace)} from {sizeFormat(user.diskSpace)}
         <ProgressBar progress={usedSpace} />
       </div>
 
-      <div className="user__actions">
+      <div className="user__actions" data-testid="userActions">
         {isEditing ? (
-          <PrimaryButton onClick={handleSave}>Save</PrimaryButton>
+          <PrimaryButton onClick={handleSave} data-testid="saveButton">Save</PrimaryButton>
         ) : (
-          <SecondaryButton onClick={() => setIsEditing(true)}>Edit</SecondaryButton>
+          <SecondaryButton onClick={() => setIsEditing(true)} data-testid="editButton">Edit</SecondaryButton>
         )}
       </div>
     </div>

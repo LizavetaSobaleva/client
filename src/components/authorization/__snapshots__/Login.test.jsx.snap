@@ -6,6 +6,32 @@ exports[`Login Component renders Login form without crashing 1`] = `
     class="authorization"
   >
     <div
+      class="authorization__banner"
+    >
+      <div
+        class="authorization__header"
+      >
+        <h2>
+          Effortless storage for your digital life
+        </h2>
+        <h3>
+          Keep your files close, no matter where you are
+        </h3>
+      </div>
+      <div
+        class="authorization__images"
+      >
+        <img
+          class="authorization__images__image_1"
+          src="test-file-stub"
+        />
+        <img
+          class="authorization__images__image_2"
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+    <div
       class="authorization__container"
     >
       <div

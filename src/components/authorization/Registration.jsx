@@ -5,6 +5,8 @@ import Input from "../UI/input/Input";
 import PrimaryButton from "../UI/primaryButton/PrimaryButton";
 import { useDispatch } from 'react-redux';
 import { registration } from "../../actions/user";
+import Image_1 from "../../assets/img/main_page.png"
+import Image_2 from "../../assets/img/profile.png"
 
 const Registration = () => {
     const [name, setName] = useState("")
@@ -14,6 +16,16 @@ const Registration = () => {
 
   return (
     <div className="authorization">
+      <div className="authorization__banner">
+        <div className="authorization__header">
+          <h2>Effortless storage for your digital life</h2>
+          <h3>Keep your files close, no matter where you are</h3>
+        </div>
+        <div className="authorization__images">
+          <img className="authorization__images__image_1" src={Image_1}/>
+          <img className="authorization__images__image_2" src={Image_2}/>
+        </div>
+      </div>
       <div className="authorization__container">
         <div className="authorization__label" data-testid="formTitle">
           <h1>Create your account</h1>

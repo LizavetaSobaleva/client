@@ -45,42 +45,42 @@ const Profile = () => {
   return (
     <>
     <NavLink to="/">
-        <div className="profile__back">
+        <div className="profile__back" data-testid="profile-back">
             <img src={backIcon} alt="" className='profile__img'/>
         </div>
     </NavLink>
-        <div className='profile'>
+        <div className='profile' data-testid="profile">
 
-            <div className="profile__avatar">
+            <div className="profile__avatar" data-testid="profile-avatar">
                 <img src={avatar} alt="" className="profile__image"/>
-                <input type="file" accept='image/*' id="avatarInput" onChange={e => changeHandler(e)} />
+                <input type="file" accept='image/*' id="avatarInput" onChange={e => changeHandler(e)} data-testid="avatar-input" />
                 <label htmlFor="avatarInput">
-                    {!currentUser.avatar && <SecondaryButton onClick={handleUploadButtonClick}>Upload avatar</SecondaryButton>}
+                    {!currentUser.avatar && <SecondaryButton onClick={handleUploadButtonClick} data-testid="upload-avatar-btn">Upload avatar</SecondaryButton>}
                 </label>
-                {currentUser.avatar && <SecondaryButton onClick={() => dispatch(deleteAvatar())}>Delete avatar</SecondaryButton>}
+                {currentUser.avatar && <SecondaryButton onClick={() => dispatch(deleteAvatar())} data-testid="delete-avatar-btn">Delete avatar</SecondaryButton>}
             </div>
 
-            <div className="profile__content">
-                <div className="profile__name">{currentUser.name}</div>
-                <div className="profile__status">
+            <div className="profile__content" data-testid="profile-content">
+                <div className="profile__name" data-testid="profile-name">{currentUser.name}</div>
+                <div className="profile__status" data-testid="profile-status">
                     <Label status={currentUser.status}>{currentUser.status}</Label>
                 </div>
-                <div className="profile__email">{currentUser.email}</div>
-                <div className="profile__diskSpace">
+                <div className="profile__email" data-testid="profile-email">{currentUser.email}</div>
+                <div className="profile__diskSpace" data-testid="profile-disk-space">
                     Used space:
-                    <div className="profile__data">
+                    <div className="profile__data" data-testid="profile-used-space">
                         {sizeFormat(currentUser.usedSpace)} from {sizeFormat(currentUser.diskSpace)}
-                        <ProgressBar progress={usedSpace}/>
+                        <ProgressBar progress={usedSpace} data-testid="progress-bar"/>
                     </div>
                 </div>
             </div>
         </div>
 
         {currentUser.status === 'admin' && (
-                <UsersList users={users}  fetchUsers={fetchUsers} />
+                <UsersList users={users} fetchUsers={fetchUsers} data-testid="usersList" />
         )}
 
-        <div className="profile__logout" onClick={() => dispatch(logout())}>
+        <div className="profile__logout" onClick={() => dispatch(logout())} data-testid="logout-btn">
             <SecondaryButton>
                 Log out
             </SecondaryButton>
